@@ -41,11 +41,6 @@ export default function Orders() {
     getOrders();
   }, []);
 
-  const handleViewOrder = (orderId, orderData) => {
-    navigate(`/order/${orderId}`, { state: { order: orderData } });
-  };
-
-
   return (
     <>
       <Header title={"My Users"} />
@@ -62,7 +57,6 @@ export default function Orders() {
                   <div
                     className="order-item-product"
                     key={index}
-                    onClick={() => handleViewOrder(el.id, el)}
                   >
                     <img
                       alt="Product image"
